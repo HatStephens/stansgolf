@@ -1,0 +1,77 @@
+table {
+  width:700px;
+}
+
+table.caps {
+  width:600px;
+}
+
+th, td {
+  padding: 1px 1px 1px 1px;
+}
+
+th {
+  border-bottom: 2px solid #006633;
+}
+
+th.name {
+  width: 200px;
+  text-align: left;
+}
+
+th.nametwo, td.nametwo {
+  width: 150px;
+  text-align: center;
+}
+
+th.namethree, td.namethree {
+  width: 50px;
+  text-align: left;
+}
+
+th.namefour, td.namefour {
+  width: 90px;
+  text-align: left;
+}
+
+th.eclectic, td.eclectic {
+  width: 75px;
+  text-align: center;
+}
+
+th.caps, td.caps {
+  width: 50px;
+  text-align: center;
+}
+
+th.hole, td.hole {
+  width: 25px;
+  text-align: center;
+}
+
+th.holecomb, td.holecomb {
+  width: 50px;
+  text-align: center;
+}
+
+th.number, td.number {
+  width: 100px;
+  text-align: center;
+}
+
+th.rborder, td.rborder {
+  border-right: 2px solid #006633;
+}
+
+td.total {
+  font-weight:bold;
+  text-align: center;
+}
+
+td {
+  font-size: 0.8em;
+}
+
+tr.shade, td.shade {
+  background-color:#99ff66 ;
+}

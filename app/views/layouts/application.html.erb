@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Stansgolf</title>
+  <title>Stans Golf Society - Driving And Slicing Since May 1993</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51507465-1', 'stansgolf.co.uk');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="wrapper">
+    <header>
+      <h1>Stans</h1>
+      <h2>Participants of Planet Golf</h2>
+    </header>
+    <nav>
+      <ul>
+        <li><%= link_to('Home', root_path) %></li>
+        <li><%= link_to('Events', events_path) %></li>
+        <li><a href="scores.php">Scores &amp; Caps</a></li>
+        <li><a href="honours.php">Honours</a></li>
+        <li><%= link_to('Reports', reports_path) %></li>
+      </ul>
+    </nav>
+    <%= yield %>
+    <footer>
+      <p style="padding:0px; margin:0px" id="dateLastMod">stansgolf.co.uk is produced and maintained by Athlone Developments. <!-- <a href="http://www.athlonedevelopments.co.uk">Click here to return to athlonedevelopments.co.uk.</a> --> <br>Last Updated: <%= ENV['LAST_UPDATED']%>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>
