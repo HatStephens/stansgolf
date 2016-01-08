@@ -1,11 +1,17 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.where(event_year: Time.now.year)
+    @events = Event.where('event_date >= ?', Date.today)
   end
 
   def show
     @event = Event.find(params[:id])
   end
 
+  def ryder_cup
+    @event = Event.where(event_type: 'ryder_cup')
+  end
+
+  def knockout
+  end
 end

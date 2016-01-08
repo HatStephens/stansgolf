@@ -28,3 +28,5 @@ en:
   date:
     formats:
       default: "%A, %e %B"
+  home:
+    main_text: '<p>Main text here</p> <p>More text here....</p>'

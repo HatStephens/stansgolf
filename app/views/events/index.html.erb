@@ -4,18 +4,18 @@
   <article class="quarterly">
     <% @events.regular.each do |event| %>
       <h4><%= link_to("#{l event.event_date} - #{event.location} - #{number_to_currency(event.cost)}", event_path(event)) %></h4>
-      <% if event.reports.any? %>
-        <% event.reports.each do |report| %>
-          <%= link_to("#{report.sub_title}", report_path(report)) %>
-        <% end %>
-      <% end %>
+      <%# if event.reports.any? %>
+        <%# event.reports.each do |report| %>
+          <%# link_to("#{report.sub_title}", report_path(report)) %>
+        <%# end %>
+      <%# end %>
       <p></p>
       <br/><br/>
     <% end %>
   </article>
   <article class="specialist">
-    <h4><a href="">Knockout Competition 2016</a><br>
+    <h4><%= link_to('Knockout Competition 2016', events_knockout_path) %></a><br>
     <br>
-    <a href="">Ryder Cup 2017</a><br></h4>
+    <%= link_to('Ryder Cup 2018', events_ryder_cup_path) %><br></h4>
   </article>
 </section>

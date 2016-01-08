@@ -5,8 +5,20 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#show'
 
-  resources :events
-  resources :reports
+  get 'events/ryder_cup', to: 'events#ryder_cup'
+  get 'events/knockout', to: 'events#knockout'
+  resources :events, only: [:index, :show]
+  resources :reports, only: [:index, :show]
+  resources :honours, only: [:index]
+  get 'honours/roll_of_honour', to: 'honours#roll_of_honour'
+  get 'honours/eclectic', to: 'honours#eclectic'
+  get 'honours/putting', to: 'honours#putting'
+  get 'honours/knockout', to: 'honours#knockout'
+  get 'honours/ryder_cup', to: 'honours#ryder_cup'
+  resources :scores, only: [:index]
+  get 'scores/eclectic', to: 'scores#eclectic'
+  get 'scores/putting', to: 'scores#putting'
+  get 'scores/handicaps', to: 'scores#handicaps'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

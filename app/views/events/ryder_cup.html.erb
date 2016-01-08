@@ -1,0 +1,11 @@
+<section class="main">
+  <h3><%= l @event.event_date %> - <%= @event.location %> - <%= number_to_currency(@event.cost) %></h3>
+  <article class="info">
+    <h4>Holders: Youngs (Lee D)</h4>
+    <p style="padding:5px; margin:5px"><%= @event.description %> Deposit <%= number_to_currency(@event.deposit) %></p>
+    <h4><%= link_to("Click here for Course Website", @event.website, target: "_blank") %></h4>
+  </article>
+  <article class="map">
+    <iframe src="<%= @event.map %>" width="400" height="300" frameborder="0" style="border:0"></iframe>
+  </article>
+</section>
