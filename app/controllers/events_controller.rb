@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    @events = Event.where('event_date >= ?', Date.today)
+    @events = Event.where('event_date >= ?', Date.today).order('event_date ASC')
   end
 
   def show
