@@ -27,6 +27,6 @@ en:
           unit: '£'
   date:
     formats:
-      default: "%A, %e %B"
+      default: "%A, %e %B %Y"
   home:
     main_text: '<p>Main text here</p> <p>More text here....</p>'
