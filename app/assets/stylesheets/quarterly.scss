@@ -8,10 +8,13 @@ article {
 
 article.info {
   width: 280px;
-  height: 370px;
   float: left;
   border: 1px solid grey;
   margin: 0px 20px 0px 0px;
+
+  p {
+    font-size: 16px;
+  }
 }
 
 article.map {
