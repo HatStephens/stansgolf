@@ -2,7 +2,7 @@
   <p style="padding:0px; margin:0px">
     Enjoy previous reports by clicking on the links below:
   </p>
-  <% Report.all.each do |report| %>
+  <% Report.all.order('event_date DESC').each do |report| %>
     <h4><%= link_to("#{report.main_title}", report_path(report)) %></h4>
   <% end %>
 </section>
